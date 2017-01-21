@@ -15,7 +15,7 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
-keyguard.no_require_sim=1
+keyguard.no_require_sim=0
 debug.sf.hw=1
 debug.composition.7x27A.type=mdp
 debug.composition.7x25A.type=mdp
@@ -29,13 +29,13 @@ persist.cne.bat.range.low.med=30
 persist.cne.bat.range.med.high=60
 persist.cne.loc.policy.op=/system/etc/OperatorPolicy.xml
 persist.cne.loc.policy.user=/system/etc/UserPolicy.xml
-persist.cne.bwbased.rat.sel=false
+persist.cne.bwbased.rat.sel=true
 persist.cne.snsr.based.rat.mgt=false
 persist.cne.bat.based.rat.mgt=false
 persist.cne.rat.acq.time.out=30000
 persist.cne.rat.acq.retry.tout=0
-persist.cne.fmc.init.time.out=30
-persist.cne.fmc.comm.time.out=130
+persist.cne.fmc.init.time.out=0
+persist.cne.fmc.comm.time.out=0
 persist.cne.fmc.retry=false
 persist.cne.feature=0
 
@@ -43,7 +43,7 @@ persist.cne.feature=0
 # system props for the MM modules
 #
 media.stagefright.enable-player=true
-media.stagefright.enable-meta=false
+media.stagefright.enable-meta=true
 media.stagefright.enable-scan=true
 media.stagefright.enable-http=true
 media.stagefright.enable-fma2dp=true
@@ -55,7 +55,7 @@ headset.hook.delay=500
 #
 # system prop for audio post processing
 #
-audio.legacy.postproc=true
+audio.legacy.postproc=false
 
 #
 # system prop for opengles version
@@ -96,7 +96,7 @@ ro.bluetooth.remote.autoconnect=true
 #
 #system property for Bluetooth discoverability timeout in seconds
 #0: Always discoverable
-#debug.bt.discoverable_time=0
+debug.bt.discoverable_time=0
 
 #
 # System prop to disable strict mode flash on display
@@ -152,7 +152,7 @@ ro.screen.layout=normal
 #
 #System prop for setting the pixel format
 #
-#ro.staticwallpaper.pixelformat=RGB_565
+ro.staticwallpaper.pixelformat=RGB_565
 
 #
 #System prop for disabling the meta data mode for encoder
@@ -218,10 +218,6 @@ ro.config.fmcv2support=1
 
 # set default mtu to 1380
 persist.data_netmgrd_mtu=1380
-#
-# System prop for enabling forced sound in camera start/stop tones
-#
-# ro.camera.sound.forced=1
 # System prop for disabling forced sound in camera start/stop tones
 ro.camera.sound.forced=0
 
@@ -236,6 +232,3 @@ ro.qc.sdk.gestures.camera=false
 debug.sf.swaprect=1
 #jiwei add for logkit profile
 persist.sys.logkit.ctrlcode=0
-
-#yanguangsheng add for MVNO
-ro.mvno.enabled=1
